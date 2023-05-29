@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400');
+@import './styles/main';
+@import './styles/carousel';
+// @import './styles/instagramItem';
+@import './styles/instagramItemv2';
+
+body{
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  overflow: hidden;
+}
+*{
+  box-sizing: border-box;
+}

@@ -1,0 +1,45 @@
+@keyframes animation-in{
+  0%{
+      opacity: 0;
+  }
+  100%{
+      opacity: 1;
+  }
+}
+@keyframes animation-out{
+  0%{
+      opacity: 1;
+  }
+  100%{
+      opacity: 0
+  }
+}
+.carousel{
+  &__slides{
+    position: relative;
+    height: 90vh;
+    &:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+  }
+  &__slide{
+      position: absolute;
+      width:100%;
+      height: 100%;
+      display: flex;
+	    justify-content: center;
+      align-items:center;
+      box-sizing:content-box;
+      transition: all 300ms ease-in-out;
+      opacity: 0;
+      animation: animation-out 300ms ease-in-out;
+      &--current{
+        opacity: 1;
+        animation: animation-in 300ms ease-in-out;
+        z-index: 10;
+      }
+    }
+  
+}
